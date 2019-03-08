@@ -1,3 +1,18 @@
+class Tabs {
+  constructor(element) {
+    this.element = element
+
+    //grabbing all tab links
+    this.tabLinks =  document.querySelectorAll('.tabs-link').forEach(function(section) {
+      return new TabLink(section);
+    });
+  }
+
+  deselect() {
+    
+  }
+}
+
 
 class TabLink {
   constructor(element) {
@@ -65,6 +80,8 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll('.tabs-link').forEach(function(section) {
-  return new TabLink(section);
-});
+// links = document.querySelectorAll('.tabs-link').forEach(function(section) {
+//   return new TabLink(section);
+// });
+
+start = new Tabs(page);
